@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #ffffff34;
+  background-color: rgba(0, 0, 0, 0.582);
+}
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+}

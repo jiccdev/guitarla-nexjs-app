@@ -1,0 +1,42 @@
+:root {
+  --primary: #e99401;
+  --negro: #262626;
+  --blanco: #fff;
+  --fuente-principal: 'Outfit', sans-serif;
+  --body-color: #f9fafb;
+}
+/* Google Fonts Inter 400 - 700 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  background-color: var(--body-color);
+}
+img {
+  max-width: 100%;
+}
+[class*='contenedor'] {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 90%;
+}
+[class*='heading'] {
+  font-size: 1.5rem;
+  text-align: start;
+  font-weight: 900;
+  color: var(--primary);
+  padding: 0 !important;
+  margin: 0 !important;
+}
