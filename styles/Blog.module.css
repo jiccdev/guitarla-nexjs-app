@@ -21,11 +21,6 @@
 }
 @media screen and (max-width: 1200px) {
   .blog {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 992px) {
-  .blog {
     grid-template-columns: repeat(2, 1fr);
   }
 }
