@@ -2,13 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from '../helpers';
+import { article, contenido, fecha } from '../styles/Input.module.css';
 
 const Input = ({ input }) => {
   const { titulo, resumen, imagen, published_at, id } = input;
-  console.log(imagen.url);
 
   return (
-    <article>
+    <article className={article}>
       <Image
         layout="responsive"
         src={imagen.url}
@@ -16,10 +16,10 @@ const Input = ({ input }) => {
         width={800}
         height={600}
       />
-      <div>
-        <h2>{titulo}</h2>
-        <p>{formatDate(published_at)}</p>
+      <div className={contenido}>
+        <h3>{titulo}</h3>
         <p>{resumen}</p>
+        <p className={fecha}>Creado el {formatDate(published_at)}</p>
         <Link href={`/blog/${id}`}>Leer entrada</Link>
       </div>
     </article>

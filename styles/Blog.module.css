@@ -1,6 +1,36 @@
 .contenedor {
-  margin: 4rem auto !important;
-  background-color: var(--blanco);
-  background: rgba(255, 255, 255, 0.2);
+  margin: 1.5rem auto !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.61);
+  padding: 2rem 2rem;
+  border-radius: 20px;
+}
+.contenedor h2 {
+  color: var(--blanco);
+}
+
+.blog {
+  display: grid;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 1920px) {
+  .blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 992px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
 }

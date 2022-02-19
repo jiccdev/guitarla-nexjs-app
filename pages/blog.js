@@ -1,13 +1,13 @@
 import Layout from '../components/Layout';
 import Input from '../components/Input';
-import { contenedor } from '../styles/Blog.module.css';
+import { contenedor, blog } from '../styles/Blog.module.css';
 
 const Blog = ({ inputs }) => {
   return (
     <Layout titlePage="Blog">
       <main className={contenedor}>
         <h2>Blog</h2>
-        <div className="">
+        <div className={blog}>
           {inputs.map((input) => (
             <Input key={input.id} input={input} />
           ))}
