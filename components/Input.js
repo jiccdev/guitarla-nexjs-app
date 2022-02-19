@@ -10,6 +10,7 @@ const Input = ({ input }) => {
   return (
     <article className={article}>
       <Image
+        priority="true"
         layout="responsive"
         src={imagen.url}
         alt={`Imagen blob${titulo}`}
