@@ -4,7 +4,7 @@ const ItemBlog = ({ input }) => {
 };
 
 export async function getStaticPaths() {
-  const url = 'http://localhost:1337/blogs';
+  const url = `${process.env.API_URL}/blogs/`;
   const res = await fetch(url);
   const inputs = await res.json();
 
@@ -18,21 +18,23 @@ export async function getStaticPaths() {
   };
 }
 
+// !Esta parte corre en el servidor
 // ? getServerSideProps() // baja frecuancia de actualizacion de items
 export async function getStaticProps({ params: { id } }) {
-  const url = `http://localhost:1337/blogs/${id}`;
-  console.log(url);
+  const url = `${process.env.API_URL}/blogs/${id}`;
+
   const res = await fetch(url);
   const input = await res.json();
-  console.log(input);
+
   return {
     props: { input },
   };
 }
-
+// !Esta parte corre en el servidor
 // ? getServerSideProps() // frecuencia de items
 // export async function getServerSideProps({ query: { id } }) {
-//   const url = `http://localhost:1337/blogs/${id}`;
+//    const url = `${process.env.API_URL}/blogs/${id}`;
+
 //   console.log(url);
 //   const res = await fetch(url);
 //   const input = await res.json();
