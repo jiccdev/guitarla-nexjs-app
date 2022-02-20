@@ -1,6 +1,36 @@
+import Image from 'next/image';
+import Layout from '../../components/Layout';
+import { formatDate } from '../../helpers';
+import {
+  contenedor,
+  item,
+  contentDesc,
+} from '../../styles/ItemBlog.module.css';
+
 const ItemBlog = ({ input }) => {
-  console.log(input);
-  return <div>ItemBlog</div>;
+  const { titulo, contenido, imagen, published_at, date } = input;
+
+  return (
+    <Layout titlePage="Item Blog">
+      <main className={contenedor}>
+        <h2>Item Blog</h2>
+        <article className={item}>
+          <h2>{titulo}</h2>
+          <Image
+            src={imagen.url}
+            layout="responsive"
+            width={800}
+            height={600}
+            alt={`Imagen input blog ${titulo}`}
+          />
+          <div className={contentDesc}>
+            <p>{formatDate(published_at)}</p>
+            <p>{contenido}</p>
+          </div>
+        </article>
+      </main>
+    </Layout>
+  );
 };
 
 export async function getStaticPaths() {

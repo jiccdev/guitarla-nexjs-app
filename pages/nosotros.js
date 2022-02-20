@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Layout from '../components/Layout';
 import {
-  main,
   contenedor,
   contenido,
   descipcion,
