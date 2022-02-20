@@ -8,7 +8,7 @@ import {
 } from '../../styles/ItemBlog.module.css';
 
 const ItemBlog = ({ input }) => {
-  const { titulo, contenido, imagen, published_at, date } = input;
+  const { titulo, contenido, imagen, published_at, date } = input[0];
 
   return (
     <Layout titlePage="Item Blog">
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
   const inputs = await res.json();
 
   const paths = inputs.map((input) => ({
-    params: { id: input.id.toString() },
+    params: { url: input.url },
   }));
 
   return {
@@ -50,10 +50,9 @@ export async function getStaticPaths() {
 
 // !Esta parte corre en el servidor
 // ? getServerSideProps() // baja frecuancia de actualizacion de items
-export async function getStaticProps({ params: { id } }) {
-  const url = `${process.env.API_URL}/blogs/${id}`;
-
-  const res = await fetch(url);
+export async function getStaticProps({ params: { url } }) {
+  const urlBlob = `${process.env.API_URL}/blogs?url=${url}`;
+  const res = await fetch(urlBlob);
   const input = await res.json();
 
   return {

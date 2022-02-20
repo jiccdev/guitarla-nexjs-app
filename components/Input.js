@@ -5,7 +5,7 @@ import { formatDate } from '../helpers';
 import { article, contenido, fecha } from '../styles/Input.module.css';
 
 const Input = ({ input }) => {
-  const { titulo, resumen, imagen, published_at, id } = input;
+  const { titulo, resumen, imagen, published_at, id, url } = input;
 
   return (
     <article className={article}>
@@ -21,7 +21,7 @@ const Input = ({ input }) => {
         <h3>{titulo}</h3>
         <p>{resumen}</p>
         <p className={fecha}>Creado el {formatDate(published_at)}</p>
-        <Link href={`/blog/${id}`}>Leer entrada</Link>
+        <Link href={`/blog/${url}`}>Leer entrada</Link>
       </div>
     </article>
   );

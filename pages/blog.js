@@ -4,7 +4,7 @@ import { contenedor, blog } from '../styles/Blog.module.css';
 
 const Blog = ({ inputs }) => {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/blogs`;
-  console.log(url);
+
   return (
     <Layout titlePage="Blog">
       <main className={contenedor}>
