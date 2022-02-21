@@ -49,6 +49,7 @@
   -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 16rem;
 }
 .contenido .fecha {
   color: rgba(255, 255, 255, 0.822);
