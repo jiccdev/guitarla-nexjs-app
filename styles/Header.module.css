@@ -1,11 +1,16 @@
 .header {
-  background-color: rgba(0, 0, 0, 0.582);
+  background-color: rgba(0, 0, 0, 0.753);
+  background-image: url('../public/img/876726.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 1rem 0;
   width: 100%;
   border-bottom: 1px solid #ffffff34;
   -webkit-box-shadow: 0px 0px 5px 3px rgba(18, 18, 18, 1);
   -moz-box-shadow: 0px 0px 5px 3px rgba(18, 18, 18, 1);
   box-shadow: 0px 0px 5px 3px rgba(18, 18, 18, 1);
+  position: relative;
 }
 .contenedor {
   background-color: transparent;
@@ -14,6 +19,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.808);
+  border-radius: 10px;
+  padding: 0rem 1rem;
 }
 .barra img {
   cursor: pointer;
@@ -60,6 +70,83 @@
   color: var(--primary);
 }
 
+/* Modelo */
+.modelo {
+  color: var(--blanco);
+  margin: 17rem;
+  text-align: left;
+}
+.modelo h2 {
+  font-size: 4rem;
+}
+
+.modelo .desc {
+  font-size: 1.4rem;
+  margin-top: -2rem;
+}
+.modelo .precio {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.modelo a {
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+  padding: 0.5rem 2.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--blanco);
+  transition: 0.3s all ease-in-out;
+}
+.modelo a:hover {
+  background-color: var(--primary);
+}
+
+.guitarraImg {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .guitarraImg {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation-name: mostrarImagen;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+  }
+}
+/* Animation Guitar  */
+@keyframes mostrarImagen {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Guitar  */
+
+@media (min-width: 768px) {
+  .modelo {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modelo {
+    margin: 4rem 0.5rem;
+    margin-bottom: 4.7rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .barra {
     align-items: start;

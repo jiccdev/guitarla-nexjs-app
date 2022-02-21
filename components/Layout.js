@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 import { layout } from '../styles/Layout.module.css';
 
-const Layout = ({ children, titlePage }) => {
+const Layout = ({ children, titlePage, guitarra }) => {
   return (
     <div className={layout}>
       <Head>
@@ -15,7 +15,7 @@ const Layout = ({ children, titlePage }) => {
       </Head>
 
       {/* Header component */}
-      <Header />
+      <Header guitarra={guitarra} />
       {/* Header component */}
 
       {/* main component */}
@@ -29,4 +29,5 @@ const Layout = ({ children, titlePage }) => {
   );
 };
 
+Layout.defaultProps = { guitarra: null };
 export default Layout;

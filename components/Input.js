@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { formatDate } from '../helpers';
 import { article, contenido, fecha } from '../styles/Input.module.css';
 
-const Input = ({ input }) => {
+const Input = ({ input, entrada }) => {
   const { titulo, resumen, imagen, published_at, id, url } = input;
 
   return (

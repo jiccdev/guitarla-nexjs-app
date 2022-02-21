@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import Guitarra from './Guitarra';
-import { itemG } from '../styles/Tienda.module.css';
 
 const Listado = ({ guitarras }) => {
   return (

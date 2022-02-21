@@ -1,19 +1,13 @@
 import Layout from '../components/Layout';
-import Input from '../components/Input';
-import { contenedor, blog } from '../styles/Blog.module.css';
+import ListadoBlog from '../components/ListadoBlog';
 
 const Blog = ({ inputs }) => {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/blogs`;
 
   return (
     <Layout titlePage="Blog">
-      <main className={contenedor}>
-        <h2>Blog</h2>
-        <div className={blog}>
-          {inputs.map((input) => (
-            <Input key={input.id} input={input} />
-          ))}
-        </div>
+      <main>
+        <ListadoBlog inputs={inputs} />
       </main>
     </Layout>
   );
